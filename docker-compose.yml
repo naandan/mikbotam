@@ -1,0 +1,13 @@
+services:
+  web:
+    image: mikbotam:latest
+    container_name: mikbotam
+    ports:
+      - "8080:80"
+    env_file:
+      - .env
+    networks:
+      - mikbotam-network
+networks:
+  mikbotam-network:
+    driver: bridge 
